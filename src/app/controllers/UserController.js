@@ -32,6 +32,7 @@ class UserController {
       name: Yup.string(),
       email: Yup.string().email(),
       oldPassword: Yup.string().min(6),
+      avatar_id: Yup.number(),
       password: Yup.string()
         .min(6)
         .when('oldPassword', (oldPassword, field) =>
