@@ -66,11 +66,11 @@ class AppointmentController {
     /**
      * check date availability
      */
-    const checkAvailabilitty = await Appointment.findOne({
+    const checkAvailability = await Appointment.findOne({
       where: { provider_id, canceled_at: null, date: hourStart },
     });
 
-    if (checkAvailabilitty) {
+    if (checkAvailability) {
       return res
         .status(400)
         .json({ error: 'Appointment date is not available.' });
