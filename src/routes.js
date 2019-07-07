@@ -30,6 +30,7 @@ router.post('/appointments', AppointmentController.store);
 router.get('/schedules', ScheduleController.index);
 
 router.get('/notifications', NotificationController.index);
+router.put('/notifications/:id', NotificationController.update);
 
 router.post('/files', upload.single('file'), FileController.store);
 
