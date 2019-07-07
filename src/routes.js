@@ -23,7 +23,7 @@ router.use(authMiddleware);
 router.put('/users', UserController.update);
 
 router.get('/providers', ProviderController.index);
-
+  
 router.get('/appointments', AppointmentController.index);
 router.post('/appointments', AppointmentController.store);
 router.delete('/appointments/:id', AppointmentController.delete);
